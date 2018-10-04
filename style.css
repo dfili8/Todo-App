@@ -1,0 +1,47 @@
+main {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: white;
+    padding: 2%;
+    margin: 0 auto;
+    width: 400px;
+}
+
+.strike {
+    text-decoration: line-through;
+}
+
+li {
+    margin-top: 10px;
+}
+
+.complete {
+    margin-right: 5px;
+    color: rgb(253, 32, 124);
+    border: 2px solid rgb(253, 32, 124);
+    border-radius: 5px;
+    background-color:white;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+
+.input-entry {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+body {
+    background-color: rgb(253, 32, 124);
+}
+
+#add-btn {
+    background-color: rgb(253, 32, 124);
+    border-style: none;
+    border-radius: 5px;
+    color:white;
+    padding-top:5px;
+    padding-bottom:5px;
+}
