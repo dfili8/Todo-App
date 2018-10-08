@@ -10,8 +10,8 @@ main {
     text-decoration: line-through;
 }
 
-ol {
-    line-height: 50%;
+i {
+    float: right;
 }
 
 li {
@@ -39,7 +39,8 @@ i {
 
 input {
     margin-bottom: 10px;
-    padding: 3px;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 body {
