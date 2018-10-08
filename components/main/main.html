@@ -9,10 +9,11 @@
     <ol>
         <li ng-repeat="item in $ctrl.list" ng-class="{strike: item.completed === true}">
             <button ng-if="item.completed === false" class="complete">Complete</button>{{item.task}}
+            <i class="fa fa-close"></i>
         </li>
     </ol>
 </div>
 <div class="input-entry">
     <input type="text" placeholder="Add your to-do"/>
-    <button id="add-btn">Add</button>
+    <button id="add-btn" ng-click="$ctrl.add()">Add</button>
 </div>
