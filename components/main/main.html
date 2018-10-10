@@ -3,17 +3,22 @@
     <h5>{{ $ctrl.header }}</h5>
 </div>
 <div class="input-entry">
-    <input type="text" placeholder="Filter your to-dos"/>
+    <input type="text" placeholder="Filter your to-dos" ng-model="filterTasks"/>
 </div>
 <div>
     <ol>
-        <li ng-repeat="item in $ctrl.list" ng-class="{strike: item.completed === true}">
-            <button ng-if="item.completed === false" class="complete">Complete</button>{{item.task}}
-            <i class="fa fa-close"></i>
+        <li ng-repeat="item in $ctrl.list | filter: filterTasks" ng-class="{strike: item.completed === true}">
+            <button ng-if="item.completed === false" class="complete" ng-click="$ctrl.completeTask(item)">
+                Complete
+            </button>
+                {{item.task}}
+            <i class="fa fa-close" ng-click="$ctrl.removeTask($index)">
+            </i>
         </li>
     </ol>
 </div>
 <div class="input-entry">
-    <input type="text" placeholder="Add your to-do"/>
-    <button id="add-btn">Add</button>
+    <input type="text" placeholder="Add your to-do" ng-model="newTask"/>
+    <button id="add-btn" ng-click="$ctrl.addTask(newTask)">Add</button>
+    <button id="rm-btn" ng-click="$ctrl.reset()">Reset</button>
 </div>

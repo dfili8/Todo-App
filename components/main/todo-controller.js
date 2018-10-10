@@ -12,6 +12,22 @@
                         {task: 'hang out with friends', completed: true},
                         {task: 'take a run', completed: false},
                         {task: 'homework', completed: true} ];
+
+            $ctrl.addTask = function(newTask){
+                $ctrl.list.push({task: newTask, completed:false});
+            }
+
+            $ctrl.completeTask = function(item){
+                item.completed =! item.completed;
+            }
+
+            $ctrl.removeTask = function(index){
+                $ctrl.list.splice(index,1);
+            }
+
+            $ctrl.reset = function(){
+                $ctrl.list = [];
+            }
             
         });
 }
